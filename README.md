@@ -2,8 +2,8 @@
 A modern and responsive job application dashboard built with Next.js, TypeScript, Tailwind CSS
 
 # 💻📱 Demo
-<img src="gif/gif1.gif" />
-<img src="gif/gif2.gif" />
+<img src="gif/gif-1.gif" />
+<img src="gif/gif-2.gif" />
 
 ## 🛠️ Tech Stack
 - **Next.js**
