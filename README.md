@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Application Dashboard
+A modern and responsive job application dashboard built with Next.js, TypeScript, Tailwind CSS
 
-## Getting Started
+# 💻📱 Demo
+<img src="gif/gif1.gif" />
+<img src="gif/gif2.gif" />
 
-First, run the development server:
+## 🛠️ Tech Stack
+- **Next.js**
+- **React.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **Redux**.
+- **Form Handling & Validation**
+- **Dark Mode Toggle**
+  
+## 📦 Installation
+
+If you wish to build the project locally and see what my website looks like, you can run the following command to first get my project on your system:
+
+```bash
+git clone https://github.com/AnkitSingh0702/job_task.git
+
+cd job_task
+```
+Install the dependencies:
+
+```bash
+npm install
+```
 
 ```bash
 npm run dev
