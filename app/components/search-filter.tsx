@@ -1,26 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Search, MapPin, Briefcase, DollarSign } from "lucide-react"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import { Search, MapPin, Briefcase, DollarSign } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
+import { cn } from "@/lib/utils";
 
 export function SearchFilters() {
-  const [salaryRange, setSalaryRange] = useState([600, 1200])
-  const commonSelectClasses = "flex-1 min-w-[160px]"
-  const commonTriggerClasses =
-    "h-full w-full border-0 bg-transparent hover:bg-transparent focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+  const [salaryRange, setSalaryRange] = useState([600, 1200]);
 
   return (
-    <div className="w-full border-b border-border/40">
-      <div className="grid grid-cols-[1fr,1fr,1fr,1fr,1.2fr] gap-0 px-4">
+    <div className="w-full border-b border-border/40 px-4 py-4">
+      {/* Responsive Grid: Adjusts for mobile and desktop */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {/* Role Selection */}
-        <div className={cn("flex h-16 items-center gap-2 border-r pr-6 px-4", commonSelectClasses)}>
+        <div className="flex items-center gap-2 border border-border rounded-md p-3">
           <Search className="h-4 w-4 text-muted-foreground" />
           <Select>
-            <SelectTrigger className={commonTriggerClasses}>
-              <SelectValue placeholder="Designer" />
+            <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
+              <SelectValue placeholder="Select Role" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="designer">Designer</SelectItem>
@@ -31,10 +29,10 @@ export function SearchFilters() {
         </div>
 
         {/* Work Location */}
-        <div className={cn("flex h-16 items-center gap-2 border-r pr-6 px-4", commonSelectClasses)}>
+        <div className="flex items-center gap-2 border border-border rounded-md p-3">
           <MapPin className="h-4 w-4 text-muted-foreground" />
           <Select>
-            <SelectTrigger className={commonTriggerClasses}>
+            <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
               <SelectValue placeholder="Work Location" />
             </SelectTrigger>
             <SelectContent>
@@ -46,10 +44,10 @@ export function SearchFilters() {
         </div>
 
         {/* Experience */}
-        <div className={cn("flex h-16 items-center gap-2 border-r pr-6 px-4", commonSelectClasses)}>
+        <div className="flex items-center gap-2 border border-border rounded-md p-3">
           <Briefcase className="h-4 w-4 text-muted-foreground" />
           <Select>
-            <SelectTrigger className={commonTriggerClasses}>
+            <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
               <SelectValue placeholder="Experience" />
             </SelectTrigger>
             <SelectContent>
@@ -61,11 +59,11 @@ export function SearchFilters() {
         </div>
 
         {/* Salary Type */}
-        <div className={cn("flex h-16 items-center gap-2 border-r pr-6 px-4", commonSelectClasses)}>
+        <div className="flex items-center gap-2 border border-border rounded-md p-3">
           <DollarSign className="h-4 w-4 text-muted-foreground" />
           <Select>
-            <SelectTrigger className={commonTriggerClasses}>
-              <SelectValue placeholder="Per month" />
+            <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
+              <SelectValue placeholder="Salary Type" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="monthly">Per month</SelectItem>
@@ -75,27 +73,22 @@ export function SearchFilters() {
         </div>
 
         {/* Salary Range */}
-        <div className="flex h-16  px-4 ">
-          <div className="w-full">
-            <div className=" text-sm text-muted-foreground">Salary Range</div>
-            <div className="relative pt-2">
-              <Slider
-                value={salaryRange}
-                onValueChange={setSalaryRange}
-                min={600}
-                max={1200}
-                step={100}
-                className="w-full"
-              />
-              <div className="absolute -bottom-6 flex w-full justify-between text-xs text-muted-foreground">
-                <span>${salaryRange[0]}</span>
-                <span>${salaryRange[1]}</span>
-              </div>
-            </div>
+        <div className="flex flex-col border border-border rounded-md p-3">
+          <span className="text-sm text-muted-foreground">Salary Range</span>
+          <Slider
+            value={salaryRange}
+            onValueChange={setSalaryRange}
+            min={600}
+            max={1200}
+            step={100}
+            className="w-full"
+          />
+          <div className="flex justify-between text-xs text-muted-foreground">
+            <span>${salaryRange[0]}</span>
+            <span>${salaryRange[1]}</span>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
