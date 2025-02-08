@@ -14,7 +14,7 @@ export function SearchFilters() {
       {/* Responsive Grid: Adjusts for mobile and desktop */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {/* Role Selection */}
-        <div className="flex items-center gap-2 border border-border rounded-md p-3">
+        <div className="flex items-center gap-2 border-r   p-3">
           <Search className="h-4 w-4 text-muted-foreground" />
           <Select>
             <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
@@ -29,7 +29,7 @@ export function SearchFilters() {
         </div>
 
         {/* Work Location */}
-        <div className="flex items-center gap-2 border border-border rounded-md p-3">
+        <div className="flex items-center gap-2 border-r  p-3">
           <MapPin className="h-4 w-4 text-muted-foreground" />
           <Select>
             <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
@@ -44,7 +44,7 @@ export function SearchFilters() {
         </div>
 
         {/* Experience */}
-        <div className="flex items-center gap-2 border border-border rounded-md p-3">
+        <div className="flex items-center gap-2 border-r  p-3">
           <Briefcase className="h-4 w-4 text-muted-foreground" />
           <Select>
             <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
@@ -59,7 +59,7 @@ export function SearchFilters() {
         </div>
 
         {/* Salary Type */}
-        <div className="flex items-center gap-2 border border-border rounded-md p-3">
+        <div className="flex items-center gap-2 border-r  p-3">
           <DollarSign className="h-4 w-4 text-muted-foreground" />
           <Select>
             <SelectTrigger className="w-full bg-transparent border-none focus:ring-0">
@@ -73,7 +73,7 @@ export function SearchFilters() {
         </div>
 
         {/* Salary Range */}
-        <div className="flex flex-col border border-border rounded-md p-3">
+        <div className="flex flex-col  p-3">
           <span className="text-sm text-muted-foreground">Salary Range</span>
           <Slider
             value={salaryRange}
