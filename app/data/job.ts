@@ -91,5 +91,34 @@ export const jobs: Job[] = [
       "Gather and prioritize product requirements",
     ],
   },
+  {
+    id: uuidv4(),
+    company: {
+      name: "Spotify",
+      logo: "FaSpotify",
+    },
+    title: "QA Engineer",
+    rating: 4,
+    reviews: 42,
+    location: "Rome, It",
+    tags: ["QA Engineer", "Full-time", "Hybrid"],
+    salary: {
+      amount: 180,
+      period: "year",
+    },
+    description: "We're seeking a QA Engineer to drive the strategy .",
+    requirements: [
+      "Bachelor's degree in Business, Computer Science, or related field",
+      "4+ years of product management experience",
+      "Strong analytical and problem-solving skills",
+      "Excellent communication and leadership abilities",
+    ],
+    responsibilities: [
+      "Define product strategy and roadmap",
+      "Work with engineering teams to deliver features",
+      "Analyze market trends and competition",
+      "Gather and prioritize product requirements",
+    ],
+  },
 ]
 

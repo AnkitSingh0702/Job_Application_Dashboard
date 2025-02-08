@@ -4,6 +4,8 @@ import { useJobs } from "@/context/JobContext"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { format } from "date-fns"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function AppliedJobs() {
   const { state } = useJobs()
@@ -11,6 +13,10 @@ export default function AppliedJobs() {
   return (
     <div className="container mx-auto py-8">
       <h1 className="mb-8 text-2xl font-bold">Applied Jobs</h1>
+      <Button variant="outline" className="mb-4" asChild>
+        <Link href="/">Back to Jobs</Link>
+      </Button>
+      
       <div className="grid gap-6">
         {state.appliedJobs.map((application) => {
           const job = state.jobs.find((j) => j.id === application.jobId)

@@ -16,6 +16,10 @@ export default function JobDetails() {
 
   return (
     <div className="container mx-auto py-8">
+      <h1 className="mb-8 text-2xl font-bold">Job Details</h1>
+      <Button variant="outline" className="mb-4" asChild>
+        <Link href="/">Back to Jobs</Link>
+      </Button>
       <div className="grid gap-6 md:grid-cols-3">
         <div className="md:col-span-2 space-y-6">
           <div className="rounded-lg border bg-card p-6">

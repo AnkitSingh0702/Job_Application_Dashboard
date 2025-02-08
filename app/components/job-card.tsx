@@ -6,13 +6,14 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { FcGoogle } from "react-icons/fc"
-import { FaFacebook, FaAmazon } from "react-icons/fa"
+import { FaFacebook, FaAmazon, FaSpotify } from "react-icons/fa"
 import type { Job } from "../types"
 
 const iconMap: { [key: string]: JSX.Element } = {
   FcGoogle: <FcGoogle className="h-12 w-12" />,
   FaFacebook: <FaFacebook className="h-12 w-12 text-blue-600" />,
   FaAmazon: <FaAmazon className="h-12 w-12 text-yellow-500" />,
+  FaSpotify: <FaSpotify className="h-12 w-12 text-green-500" />,
 }
 
 export function JobCard(job: Job) {
